@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Registration Form</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial;
+                background: azure;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 50vh;
+            }
+            .form-container {
+                width: 100%;
+                max-width: 600px;
+                background: burlywood;
+                border-radius: 13px;
+                box-shadow: 0 4px 12px rgba(2,5,1,1);
+                padding: 20px;
+            }
+            h2 {
+                text-align: center;
+                font-size: 24px;
+                margin-bottom: 2px;
+            }
+            .row {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                margin-bottom: 4px;
+                align-items: center;
+            }
+            label {
+                font-size: 12px;
+            }
+            input, select {
+                width: 100%;
+                padding: 4px;
+                border: 2px solid;
+                border-radius: 5px;
+                transition: border-color 0.3s;
+            }
+            input:focus, select:focus {
+                border-color: aqua;
+            }
+            button {
+                width: 100%;
+                padding: 10px;
+                background-color: skyblue;
+                border: navy;
+                border-radius: 10px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            button:hover {
+                background-color: green;
+                color: skyblue;
+            }
+            @media (max-width: 300px){
+                .row{
+                    grid-template-columns: 1fr;
+                }
+            }
+            @media (min-width: 601px) and (max-width: 1024px){
+                .row{
+                    grid-template-columns: 1fr 1.4fr;
+                }
+            }
+            @media (min-width: 901px){
+                .row{
+                    grid-template-columns: 1fr 2fr;
+                }
+            }
+        </style>
+    </head>
+    <body color="blue">
+    <div class="form-container">
+        <h2>Student Registration</h2>
+        <form>
+            <div class="row">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" placeholder="enter the name" required>
+            </div>
+            <div class="row">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="enter the email" required>
+            </div>
+            <div class="row">
+                <label for="gender">Gender:</label>
+                <select name="gender" id="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="row">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder="enter the password">
+            </div>
+            <div class="row">
+                <label>Hobbies:</label>               
+               &nbsp; <label for="music">Music</label>
+                <input type="checkbox" name="hobbies" id="music" value="music">
+                <label for="kabbadi">Playing Games</label>
+                <input type="checkbox" name="hobbies" id="kabbadi" value="kabbadi">
+                <label for="sleeping">Sleeping</label>
+                <input type="checkbox" name="hobbies" id="sleeping" value="sleeping">
+            </div>
+            <button type="submit">SUBMIT</button>
+
+        </form>
+    </div>
+    </body>
+</html>
